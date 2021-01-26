@@ -15,6 +15,7 @@ namespace WebApi.BusinessLogic
     {
         public Task<List<Order>> Handle(ListAllOrders request, CancellationToken cancellationToken)
         {
+            //Interact with Service, DatabaseContext, Stream or something else
             return Task.FromResult(new List<Order>() {
                 new Order() { CustomerId = 1234, Id = 2201, OrderTotal = 9.95m, OrderLines = new List<OrderLine>() },
                 new Order() { CustomerId = 1235, Id = 2201, OrderTotal = 29.95m, OrderLines = new List<OrderLine>() },
@@ -24,6 +25,7 @@ namespace WebApi.BusinessLogic
 
         public Task<List<Order>> Handle(ListAllOrdersForCustomer request, CancellationToken cancellationToken)
         {
+            //Interact with Service, DatabaseContext, Stream or something else
             return Task.FromResult(new List<Order>() {
                 new Order() { CustomerId = 1235, Id = 2201, OrderTotal = 9.95m, OrderLines = new List<OrderLine>() },
                 new Order() { CustomerId = 1236, Id = 2201, OrderTotal = 29.95m, OrderLines = new List<OrderLine>() },
@@ -33,6 +35,7 @@ namespace WebApi.BusinessLogic
 
         public Task<List<Order>> Handle(ListTodaysOrders request, CancellationToken cancellationToken)
         {
+            //Interact with Service, DatabaseContext, Stream or something else
             return Task.FromResult(new List<Order>() {
                 new Order() { CustomerId = 1231, Id = 2201, OrderTotal = 92.95m, OrderLines = new List<OrderLine>() },
                 new Order() { CustomerId = 1232, Id = 2201, OrderTotal = 591.95m, OrderLines = new List<OrderLine>() },
@@ -42,6 +45,7 @@ namespace WebApi.BusinessLogic
 
         public Task<Order> Handle(GetOrder request, CancellationToken cancellationToken)
         {
+            //Interact with Service, DatabaseContext, Stream or something else
             return Task.FromResult(new Order()
             {
                 CustomerId = 1234,
