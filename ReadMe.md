@@ -12,7 +12,7 @@ There's a lot of news in NET 5, for a complete list see [What's new in .NET 5](h
 
 No new language features for **Visual Basic** in .NET 5, but a lot of improvements in **F#.**
 
-**Regular expressions** Relational pattern matching, extends pattern matching capabilities to relational operators for comparative evaluations and expressions, including logical patterns - new keywords `and`, `or`, and `not`.
+**Pattern matching** Relational pattern matching, extends pattern matching capabilities to relational operators for comparative evaluations and expressions, including logical patterns - new keywords `and`, `or`, and `not`.
 
 **Performance increment.** In general NET 5 is twice as fast as NET Core 3.x and four times as fast as NET Framework 4.x.
 
