@@ -60,11 +60,7 @@ See sample code PatternMatching and [Tutorial: Build algorithms with pattern mat
 
 ## System.Text.Json
 
-See sample code
-
-## Regular expressions
-
-See sample code
+See comprehensive description here [What's new in .NET 5](https://docs.microsoft.com/en-us/dotnet/core/dotnet-five#systemtextjson-new-features)
 
 ## Benchmarking
 
