@@ -31,4 +31,8 @@
     </AdditionalFiles>
     <AdditionalFiles Include="Templates\QueryClassTemplate.txt" CsvLoadType="OnDemand" CacheObjects="true" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
 </Project>

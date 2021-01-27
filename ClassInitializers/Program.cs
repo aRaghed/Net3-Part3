@@ -4,15 +4,14 @@ namespace ClassInitializers
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             #region Traditional method
 
             var personTraditionally = new PersonTraditionally { FirstName = "Lennart", LastName = "Jansson" };
             personTraditionally.LastName = "Persson";
+
             #endregion Traditional method
-
-
 
             #region ClassInitializer
 
@@ -27,6 +26,9 @@ namespace ClassInitializers
             var personRecord = new PersonRecord { FirstName = "Lennart", LastName = "Jansson" };
             var anotherPerson = personRecord with { LastName = "Persson" };
             var originalPerson = anotherPerson with { LastName = "Jansson" };
+            if (personRecord == originalPerson)
+            {
+            }
             /* We would now have ReferenceEquals(personRecord, originalPerson) = false (they aren’t the same object)
              * but Equals(personRecord, originalPerson) = true (they have the same value).
              * Along with the value-based Equals there’s also a value-based GetHashCode() override to go along with it.
