@@ -53,6 +53,10 @@ namespace PatternMatching
             //{
             //    Console.WriteLine("Caught an argument exception when using null");
             //}
+
+            var ages = TollCalculator.GetAge();
+            var name = ages.Item2;
+            Console.WriteLine(name);
         }
     }
 
@@ -113,6 +117,7 @@ namespace PatternMatching
         public static decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
             //Use the Weekday, TimeBand and if we are heading outbound from or inbound to the city to calculate a toll factor
+            //Use a tuple for the values
             (IsWeekDay(timeOfToll), GetTimeBand(timeOfToll), inbound) switch
             {
                 (true, TimeBand.MorningRush, true) => 2.00m,
@@ -153,6 +158,11 @@ namespace PatternMatching
                 < 16 => TimeBand.Daytime,
                 _ => TimeBand.EveningRush,
             };
+
+        public static (int, string, int, int, int) GetAge()
+        {
+            return (10, "Kalle", 12, 13, 14);
+        }
     }
 }
 

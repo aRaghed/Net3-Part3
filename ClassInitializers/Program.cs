@@ -21,6 +21,11 @@ namespace ClassInitializers
 
             #endregion ClassInitializer
 
+            Test test = new("Lennart", "Jansson", 60);
+            var (f, n, a) = test;
+            Console.WriteLine($"{f} {n} {a}");
+            Console.WriteLine(test);
+
             #region Record
 
             var personRecord = new PersonRecord { FirstName = "Lennart", LastName = "Jansson" };
@@ -86,4 +91,6 @@ namespace ClassInitializers
     {
         public int Id;
     }
+
+    public record Test(string FirstName, string LastName, int Age);
 }
