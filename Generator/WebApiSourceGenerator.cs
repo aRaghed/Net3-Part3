@@ -46,6 +46,7 @@ namespace Generator
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<{queryReturnType}> {queryCommandName}([FromBody]{queryCommandName} command)
                 {{
+                    logger.LogWarning(""Executing command: {{queryCommandName}}"", command);
                     return await _mediator.Send(command);
                 }}
 
@@ -81,6 +82,7 @@ namespace Generator
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<{commandReturnType}> {commandName}([FromBody]{commandName} command)
                 {{
+                    logger.LogWarning(""Executing command: {{command}}"", command);
                     return await _mediator.Send(command);
                 }}
 

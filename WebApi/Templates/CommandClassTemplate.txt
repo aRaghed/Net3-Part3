@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using WebApi;
 using WebApi.BusinessLogic;
 using WebApi.CommandAndQueries;
@@ -18,10 +19,12 @@ namespace CodeGenerated
     [ApiController]
     public class CommandController : ControllerBase
     {
+        private readonly ILogger<CommandController> logger;
         private readonly IMediator _mediator;
 
-        public CommandController(IMediator mediator)
+        public CommandController(ILogger<CommandController> logger, IMediator mediator)
         {
+            this.logger = logger;
             _mediator = mediator;
         }
 

@@ -1,12 +1,8 @@
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WebApi
 {
@@ -23,5 +19,13 @@ namespace WebApi
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+    }
+
+    public static class LoggerExtensions
+    {
+        public static void LogWithRequest<T>(this ILogger<T> logger, string message) where T : class
+        {
+            logger.LogInformation(message);
+        }
     }
 }
